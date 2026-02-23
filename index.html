@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVLN Brindavan | Krishna Theme Venue</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gidugu&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --krishna-navy: #020817;
+            --gold-primary: #D4AF37;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .font-serif-krishna {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .telugu-font {
+            font-family: 'Gidugu', sans-serif;
+        }
+
+        .gold-text {
+            color: var(--gold-primary);
+        }
+
+        .gold-bg {
+            background-color: var(--gold-primary);
+        }
+
+        .gold-border {
+            border-color: var(--gold-primary);
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.65);
+        }
+
+        /* Gallery Hover Effects */
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="bg-[#020817] text-white">
+
+    <nav class="bg-[#020817]/95 border-b border-white/10 sticky top-0 z-50 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold tracking-[0.2em] gold-text uppercase">SVLN Brindavan</div>
+            <div class="hidden lg:flex space-x-8 text-[11px] uppercase tracking-widest font-semibold">
+                <a href="#home" class="hover:text-[#D4AF37] transition">Home</a>
+                <a href="#about" class="hover:text-[#D4AF37] transition">About</a>
+                <a href="#gallery" class="hover:text-[#D4AF37] transition">Gallery</a>
+                <a href="#amenities" class="hover:text-[#D4AF37] transition">Amenities</a>
+                <a href="#pricing" class="hover:text-[#D4AF37] transition">Pricing</a>
+                <a href="#booking" class="hover:text-[#D4AF37] transition">Booking</a>
+                <a href="#contact" class="hover:text-[#D4AF37] transition">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="hidden md:block text-xs gold-text font-bold"><i
+                        class="fas fa-phone-alt mr-2"></i>9848166799</span>
+                <a href="#booking"
+                    class="gold-bg text-black px-5 py-2 rounded-sm font-bold text-[10px] uppercase shadow-lg">Book
+                    Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="h-screen bg-cover bg-center relative"
+        style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80');">
+        <div class="absolute inset-0 hero-overlay flex items-center justify-center text-center px-4">
+            <div class="max-w-4xl">
+                <p class="gold-text tracking-[0.4em] uppercase mb-6 text-xs md:text-sm font-semibold">Visakhapatnam's
+                    Sacred Celebration Venue</p>
+                <h1 class="text-5xl md:text-8xl font-serif-krishna leading-tight mb-8">Where Divine <br><span
+                        class="gold-text italic">Celebrations</span> Begin</h1>
+                <p class="text-gray-300 max-w-xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
+                    An exquisite venue for weddings, receptions, corporate events, and celebrations that deserve nothing
+                    less than perfection.
+                </p>
+                <div class="flex flex-col md:flex-row gap-5 justify-center">
+                    <a href="#booking"
+                        class="gold-bg px-10 py-4 rounded text-black font-bold uppercase text-xs tracking-widest hover:bg-yellow-500 transition shadow-xl">Book
+                        Your Date <i class="fas fa-arrow-right ml-2"></i></a>
+                    <a href="#gallery"
+                        class="border border-white/40 px-10 py-4 rounded text-white font-bold uppercase text-xs tracking-widest hover:bg-white/10 transition">View
+                        Gallery</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 px-6 border-b border-white/5">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row gap-16 items-start">
+                <div class="md:w-1/3">
+                    <p class="gold-text tracking-[0.3em] uppercase text-xs mb-3 font-semibold">Our Story / మన ప్రయాణం
+                    </p>
+                    <h2 class="text-4xl md:text-6xl font-serif-krishna leading-tight">
+                        A Legacy of <br>
+                        <span class="gold-text italic">Grandeur</span>
+                    </h2>
+                    <div class="mt-10 opacity-10">
+                        <i class="fas fa-peacock text-9xl gold-text"></i>
+                    </div>
+                </div>
+                <div class="md:w-2/3 space-y-8 text-gray-400 leading-relaxed text-lg">
+                    <p>
+                        Established on <span class="text-white font-semibold">February 7, 2025</span>, SVLN Brindavan
+                        was built to offer a blend of sacred tradition and modern luxury. In a very short time, we have
+                        successfully hosted nearly <span class="text-white font-semibold">100 grand events</span>.
+                    </p>
+                    <p class="telugu-font text-2xl text-white/90 border-l-2 gold-border pl-6 italic">
+                        మా బృందావనం ఫిబ్రవరి 7, 2025 న స్థాపించబడింది. అతి తక్కువ సమయంలోనే 100కు పైగా శుభకార్యాలను
+                        దిగ్విజయంగా పూర్తి చేశాము. మా వేదిక అన్ని రకాల సాంప్రదాయ మరియు ఆధునిక వేడుకలకు అనువైనది.
+                    </p>
+                    <p>
+                        Whether it’s a marriage with 750 guests or a cozy birthday party, our team provides seamless
+                        management, premium catering (Veg & Non-Veg), and artistic decoration tailored to your specific
+                        theme.
+                    </p>
+                    <div class="pt-4">
+                        <a href="#gallery"
+                            class="gold-text border-b border-[#D4AF37]/40 pb-2 hover:text-white hover:border-white transition uppercase text-xs tracking-[0.2em] font-bold">Discover
+                            More <i class="fas fa-chevron-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-black/20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="gold-text tracking-[0.3em] uppercase text-xs font-semibold mb-2">Our Spaces</p>
+                <h3 class="text-4xl md:text-5xl font-serif-krishna mb-4">Visual <span class="gold-text">Gallery</span>
+                </h3>
+                <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">Explore our stunning venues, exquisite
+                    décor, and the magic we bring to every celebration.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="gallery-item h-[450px]">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80"
+                        alt="Main Hall" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item h-[450px]">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80"
+                        alt="Stage Decoration" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item h-[450px]">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80"
+                        alt="Outdoor Seating" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item h-[400px] md:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80"
+                        alt="Dining Area" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item h-[400px]">
+                    <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&q=80"
+                        alt="Entrance Decor" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="telugu-font text-2xl gold-text italic">మా వేదిక యొక్క వైభవాన్ని ఇక్కడ చూడండి</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenities" class="py-24 bg-black/30">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-serif-krishna tracking-widest uppercase">Venue Amenities</h3>
+                <div class="h-1 w-24 gold-bg mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div class="text-center">
+                    <div class="text-4xl gold-text mb-4"><i class="fas fa-users"></i></div>
+                    <h4 class="font-bold text-sm uppercase mb-2">Capacity</h4>
+                    <p class="text-xs text-gray-500">200 Sitting<br>750 Rotation</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl gold-text mb-4"><i class="fas fa-utensils"></i></div>
+                    <h4 class="font-bold text-sm uppercase mb-2">Catering</h4>
+                    <p class="text-xs text-gray-500">Pure Veg &<br>Non-Veg Menus</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl gold-text mb-4"><i class="fas fa-wifi"></i></div>
+                    <h4 class="font-bold text-sm uppercase mb-2">Internet</h4>
+                    <p class="text-xs text-gray-500">Free High-Speed<br>Wi-Fi Access</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl gold-text mb-4"><i class="fas fa-bed"></i></div>
+                    <h4 class="font-bold text-sm uppercase mb-2">AC Rooms</h4>
+                    <p class="text-xs text-gray-500">Complimentary<br>Stay Included</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="p-10 border border-white/10 rounded-lg hover:border-[#D4AF37]/50 transition bg-white/5">
+                <h4 class="text-2xl font-serif-krishna gold-text mb-4">Marriage Ceremony</h4>
+                <p class="text-4xl font-bold mb-6 text-white">₹90,000 - 1 Lakh</p>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><i class="fas fa-check gold-text mr-3"></i> 3 Complimentary AC Rooms</li>
+                    <li><i class="fas fa-check gold-text mr-3"></i> Complete Hall Decoration</li>
+                    <li><i class="fas fa-check gold-text mr-3"></i> Dedicated Event Supervisor</li>
+                </ul>
+            </div>
+            <div class="p-10 border border-white/10 rounded-lg hover:border-[#D4AF37]/50 transition bg-white/5">
+                <h4 class="text-2xl font-serif-krishna gold-text mb-4">Other Celebrations</h4>
+                <p class="text-4xl font-bold mb-6 text-white">₹45,000 - 50,000</p>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><i class="fas fa-check gold-text mr-3"></i> 1 Complimentary AC Room</li>
+                    <li><i class="fas fa-check gold-text mr-3"></i> Birthdays, Engagements, Parties</li>
+                    <li><i class="fas fa-check gold-text mr-3"></i> Standard Decoration Support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-24 bg-[#0A1122]">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-serif-krishna mb-2">Reserve Your Date</h3>
+                <p class="text-gray-500 telugu-font text-2xl">బుకింగ్ విచారణ కోసం ఈ క్రింది వివరాలను పంపండి</p>
+            </div>
+            <form class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input type="text" id="custName" placeholder="Full Name"
+                        class="w-full bg-white/5 border border-white/10 p-4 rounded focus:outline-none focus:border-[#D4AF37]">
+                    <input type="tel" id="custPhone" placeholder="Mobile Number"
+                        class="w-full bg-white/5 border border-white/10 p-4 rounded focus:outline-none focus:border-[#D4AF37]">
+                </div>
+                <input type="date" id="eventDate"
+                    class="w-full bg-white/5 border border-white/10 p-4 rounded text-gray-400">
+                <select id="eventSelect" class="w-full bg-white/5 border border-white/10 p-4 rounded text-gray-400">
+                    <option value="Marriage">Marriage Ceremony</option>
+                    <option value="Other Event">Other Private Event</option>
+                </select>
+                <button type="button" onclick="requestWhatsapp()"
+                    class="w-full gold-bg text-black font-bold py-4 rounded uppercase tracking-widest shadow-lg">Send
+                    Request via WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl font-serif-krishna gold-text mb-6">Contact Us</h3>
+                <p class="mb-4 text-gray-300"><i class="fas fa-envelope mr-3 gold-text"></i> svlnbrindavan@gmail.com</p>
+                <p class="mb-4 text-gray-300"><i class="fas fa-map-marker-alt mr-3 gold-text"></i> Visakhapatnam, Andhra
+                    Pradesh</p>
+                <div class="mt-8">
+                    <p class="text-xs text-gray-500 uppercase tracking-widest mb-4">Scan for Location</p>
+                    <div class="w-32 h-32 bg-white/10 rounded flex items-center justify-center border border-white/10">
+                        <i class="fas fa-qrcode text-4xl opacity-20"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="h-80 bg-white/5 rounded-lg overflow-hidden border border-white/10">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15206.5910606627!2d83.2184515!3d17.6868159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39433890f1719b%3A0x633d7b827e4e098a!2sVisakhapatnam%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center border-t border-white/5 text-[10px] text-gray-600 uppercase tracking-[0.3em]">
+        © 2026 SVLN Brindavan Function Hall. All Rights Reserved.
+    </footer>
+
+    <div class="fixed bottom-8 right-8 flex flex-col space-y-4 z-50">
+        <a href="https://wa.me/919848166799" target="_blank"
+            class="w-14 h-14 bg-green-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+        <a href="tel:9848166799"
+            class="w-14 h-14 gold-bg text-black rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition">
+            <i class="fas fa-phone-alt text-xl"></i>
+        </a>
+    </div>
+
+    <script>
+        function requestWhatsapp() {
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const date = document.getElementById('eventDate').value;
+            const type = document.getElementById('eventSelect').value;
+
+            const text = `Namaste! I would like to book SVLN Brindavan.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Date:* ${date}%0A*Event:* ${type}`;
+            window.open(`https://wa.me/919848166799?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+
+</html>
