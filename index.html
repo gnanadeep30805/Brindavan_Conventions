@@ -4,20 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVLN Brindavan | Krishna Theme Venue</title>
+
+    <title>SVLN Brindavan | Premium Wedding Venue</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Gidugu&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Gidugu&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
         rel="stylesheet">
+
     <style>
         :root {
-            --krishna-navy: #020817;
-            --gold-primary: #D4AF37;
+            --krishna-blue: #0B3D91;
+            --peacock-blue: #1B6CA8;
+            --divine-gold: #D4AF37;
+            --pitambara-yellow: #FFD700;
+            --temple-dark: #020817;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--temple-dark), var(--krishna-blue));
+            color: white;
             scroll-behavior: smooth;
         }
 
@@ -25,296 +37,409 @@
             font-family: 'Playfair Display', serif;
         }
 
-        .telugu-font {
-            font-family: 'Gidugu', sans-serif;
-        }
-
         .gold-text {
-            color: var(--gold-primary);
+            color: var(--divine-gold);
         }
 
         .gold-bg {
-            background-color: var(--gold-primary);
+            background: linear-gradient(135deg, var(--divine-gold), var(--pitambara-yellow));
+            color: black;
         }
 
-        .gold-border {
-            border-color: var(--gold-primary);
-        }
-
-        .hero-overlay {
-            background: rgba(0, 0, 0, 0.65);
-        }
-
-        /* Gallery Hover Effects */
         .gallery-item {
             overflow: hidden;
-            border-radius: 1rem;
+            border-radius: 12px;
+            border: 2px solid var(--divine-gold);
         }
 
         .gallery-item img {
-            transition: transform 0.5s ease;
+            transition: transform .6s;
         }
 
         .gallery-item:hover img {
-            transform: scale(1.05);
+            transform: scale(1.08);
+        }
+
+        .hero-overlay {
+            background: rgba(2, 8, 23, .75);
+        }
+
+        /* Floating Peacock Feather */
+
+        .peacock-feather {
+            position: fixed;
+            top: 30%;
+            left: -100px;
+            width: 120px;
+            height: 120px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/3/3a/Peacock_feather.png') center/contain no-repeat;
+            opacity: 0.15;
+            animation: floatFeather 25s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes floatFeather {
+            0% {
+                transform: translateX(0) rotate(0deg)
+            }
+
+            100% {
+                transform: translateX(120vw) rotate(360deg)
+            }
         }
     </style>
 </head>
 
-<body class="bg-[#020817] text-white">
+<body>
+
+    <div class="peacock-feather"></div>
+
+    <!-- NAVBAR -->
 
     <nav class="bg-[#020817]/95 border-b border-white/10 sticky top-0 z-50 p-4">
+
         <div class="container mx-auto flex justify-between items-center">
-            <div class="text-xl font-bold tracking-[0.2em] gold-text uppercase">SVLN Brindavan</div>
-            <div class="hidden lg:flex space-x-8 text-[11px] uppercase tracking-widest font-semibold">
-                <a href="#home" class="hover:text-[#D4AF37] transition">Home</a>
-                <a href="#about" class="hover:text-[#D4AF37] transition">About</a>
-                <a href="#gallery" class="hover:text-[#D4AF37] transition">Gallery</a>
-                <a href="#amenities" class="hover:text-[#D4AF37] transition">Amenities</a>
-                <a href="#pricing" class="hover:text-[#D4AF37] transition">Pricing</a>
-                <a href="#booking" class="hover:text-[#D4AF37] transition">Booking</a>
-                <a href="#contact" class="hover:text-[#D4AF37] transition">Contact</a>
+
+            <div class="text-xl font-bold gold-text tracking-widest uppercase">
+                SVLN Brindavan
             </div>
-            <div class="flex items-center gap-4">
-                <span class="hidden md:block text-xs gold-text font-bold"><i
-                        class="fas fa-phone-alt mr-2"></i>9848166799</span>
-                <a href="#booking"
-                    class="gold-bg text-black px-5 py-2 rounded-sm font-bold text-[10px] uppercase shadow-lg">Book
-                    Now</a>
+
+            <div class="hidden lg:flex space-x-8 text-xs uppercase tracking-widest">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#amenities">Amenities</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#booking">Booking</a>
+                <a href="#contact">Contact</a>
+
             </div>
+
+            <a href="#booking" class="gold-bg px-5 py-2 rounded text-xs font-bold">
+                Book Now
+            </a>
+
         </div>
     </nav>
 
+    <!-- HERO -->
+
     <header id="home" class="h-screen bg-cover bg-center relative"
-        style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80');">
+        style="background-image:url('data:image/jpeg;base64,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');">
+
         <div class="absolute inset-0 hero-overlay flex items-center justify-center text-center px-4">
-            <div class="max-w-4xl">
-                <p class="gold-text tracking-[0.4em] uppercase mb-6 text-xs md:text-sm font-semibold">Visakhapatnam's
-                    Sacred Celebration Venue</p>
-                <h1 class="text-5xl md:text-8xl font-serif-krishna leading-tight mb-8">Where Divine <br><span
-                        class="gold-text italic">Celebrations</span> Begin</h1>
-                <p class="text-gray-300 max-w-xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
-                    An exquisite venue for weddings, receptions, corporate events, and celebrations that deserve nothing
-                    less than perfection.
+
+            <div data-aos="fade-up">
+
+                <h1 class="text-5xl md:text-7xl font-serif-krishna mb-6">
+                    Where Divine <span class="gold-text">Celebrations</span> Begin
+                </h1>
+
+                <p class="text-gray-300 max-w-xl mx-auto mb-10">
+                    Premium wedding & event venue near Simhachalam, Visakhapatnam.
                 </p>
-                <div class="flex flex-col md:flex-row gap-5 justify-center">
-                    <a href="#booking"
-                        class="gold-bg px-10 py-4 rounded text-black font-bold uppercase text-xs tracking-widest hover:bg-yellow-500 transition shadow-xl">Book
-                        Your Date <i class="fas fa-arrow-right ml-2"></i></a>
-                    <a href="#gallery"
-                        class="border border-white/40 px-10 py-4 rounded text-white font-bold uppercase text-xs tracking-widest hover:bg-white/10 transition">View
-                        Gallery</a>
-                </div>
+
+                <a href="#booking" class="gold-bg px-8 py-4 rounded uppercase font-bold text-xs">
+                    Book Your Date
+                </a>
+
             </div>
+
         </div>
+
     </header>
 
-    <section id="about" class="py-24 px-6 border-b border-white/5">
-        <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row gap-16 items-start">
-                <div class="md:w-1/3">
-                    <p class="gold-text tracking-[0.3em] uppercase text-xs mb-3 font-semibold">Our Story / మన ప్రయాణం
-                    </p>
-                    <h2 class="text-4xl md:text-6xl font-serif-krishna leading-tight">
-                        A Legacy of <br>
-                        <span class="gold-text italic">Grandeur</span>
-                    </h2>
-                    <div class="mt-10 opacity-10">
-                        <i class="fas fa-peacock text-9xl gold-text"></i>
-                    </div>
-                </div>
-                <div class="md:w-2/3 space-y-8 text-gray-400 leading-relaxed text-lg">
-                    <p>
-                        Established on <span class="text-white font-semibold">February 7, 2025</span>, SVLN Brindavan
-                        was built to offer a blend of sacred tradition and modern luxury. In a very short time, we have
-                        successfully hosted nearly <span class="text-white font-semibold">100 grand events</span>.
-                    </p>
-                    <p class="telugu-font text-2xl text-white/90 border-l-2 gold-border pl-6 italic">
-                        మా బృందావనం ఫిబ్రవరి 7, 2025 న స్థాపించబడింది. అతి తక్కువ సమయంలోనే 100కు పైగా శుభకార్యాలను
-                        దిగ్విజయంగా పూర్తి చేశాము. మా వేదిక అన్ని రకాల సాంప్రదాయ మరియు ఆధునిక వేడుకలకు అనువైనది.
-                    </p>
-                    <p>
-                        Whether it’s a marriage with 750 guests or a cozy birthday party, our team provides seamless
-                        management, premium catering (Veg & Non-Veg), and artistic decoration tailored to your specific
-                        theme.
-                    </p>
-                    <div class="pt-4">
-                        <a href="#gallery"
-                            class="gold-text border-b border-[#D4AF37]/40 pb-2 hover:text-white hover:border-white transition uppercase text-xs tracking-[0.2em] font-bold">Discover
-                            More <i class="fas fa-chevron-right ml-2"></i></a>
-                    </div>
-                </div>
+    <!-- ABOUT -->
+
+    <section id="about" class="py-24 container mx-auto px-6">
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+
+            <div data-aos="fade-right">
+
+                <h2 class="text-5xl font-serif-krishna mb-6">
+                    A Legacy of <span class="gold-text">Grandeur</span>
+                </h2>
+
+                <p class="text-gray-400 leading-relaxed">
+
+                    Established on February 7, 2025, SVLN Brindavan is one of the fastest growing function halls near
+                    Simhachalam.
+
+                    In a short time we have hosted over 100 successful events including weddings, receptions,
+                    engagements, and birthday celebrations.
+
+                </p>
+
             </div>
+
+            <div data-aos="fade-left">
+
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed" class="rounded-xl shadow-lg">
+
+            </div>
+
         </div>
+
     </section>
 
-    <section id="gallery" class="py-24 bg-black/20">
+    <!-- PREMIUM GALLERY SLIDER -->
+
+    <section id="gallery" class="py-24 bg-black/30">
+
+        <div class="text-center mb-12">
+
+            <h3 class="text-4xl font-serif-krishna">
+                Luxury <span class="gold-text">Gallery</span>
+            </h3>
+
+        </div>
+
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <p class="gold-text tracking-[0.3em] uppercase text-xs font-semibold mb-2">Our Spaces</p>
-                <h3 class="text-4xl md:text-5xl font-serif-krishna mb-4">Visual <span class="gold-text">Gallery</span>
-                </h3>
-                <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">Explore our stunning venues, exquisite
-                    décor, and the magic we bring to every celebration.</p>
+
+            <div class="gallery-item">
+
+                <img id="gallerySlider"
+                    src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep1aCI1etwl7VF-zJCeQUimWHQ9RiSlnohzFQa5Z993WwmozwJuq1MNjcpvfxbCZIcpKwAuWopPUT7Nn3oXPqpBNHKPY9iw9R8x99FzK2r0AYmlImh5czKjepmhIQExycefFOE8s8IyLFA=s1360-w1360-h1020-rw"
+                    alt="Gallery Image" class="w-full h-[500px] object-cover">
+
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="gallery-item h-[450px]">
-                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80"
-                        alt="Main Hall" class="w-full h-full object-cover">
-                </div>
-                <div class="gallery-item h-[450px]">
-                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80"
-                        alt="Stage Decoration" class="w-full h-full object-cover">
-                </div>
-                <div class="gallery-item h-[450px]">
-                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80"
-                        alt="Outdoor Seating" class="w-full h-full object-cover">
-                </div>
-                <div class="gallery-item h-[400px] md:col-span-2">
-                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80"
-                        alt="Dining Area" class="w-full h-full object-cover">
-                </div>
-                <div class="gallery-item h-[400px]">
-                    <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&q=80"
-                        alt="Entrance Decor" class="w-full h-full object-cover">
-                </div>
-            </div>
-
-            <div class="text-center mt-12">
-                <p class="telugu-font text-2xl gold-text italic">మా వేదిక యొక్క వైభవాన్ని ఇక్కడ చూడండి</p>
-            </div>
         </div>
+
     </section>
 
-    <section id="amenities" class="py-24 bg-black/30">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h3 class="text-3xl font-serif-krishna tracking-widest uppercase">Venue Amenities</h3>
-                <div class="h-1 w-24 gold-bg mx-auto mt-4"></div>
+    <!-- AMENITIES -->
+
+    <section id="amenities" class="py-24 container mx-auto px-6">
+
+        <div class="grid md:grid-cols-4 gap-10 text-center">
+
+            <div data-aos="zoom-in">
+                <i class="fas fa-users text-4xl gold-text"></i>
+                <h4 class="mt-4 font-bold">750 Guests</h4>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
-                <div class="text-center">
-                    <div class="text-4xl gold-text mb-4"><i class="fas fa-users"></i></div>
-                    <h4 class="font-bold text-sm uppercase mb-2">Capacity</h4>
-                    <p class="text-xs text-gray-500">200 Sitting<br>750 Rotation</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl gold-text mb-4"><i class="fas fa-utensils"></i></div>
-                    <h4 class="font-bold text-sm uppercase mb-2">Catering</h4>
-                    <p class="text-xs text-gray-500">Pure Veg &<br>Non-Veg Menus</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl gold-text mb-4"><i class="fas fa-wifi"></i></div>
-                    <h4 class="font-bold text-sm uppercase mb-2">Internet</h4>
-                    <p class="text-xs text-gray-500">Free High-Speed<br>Wi-Fi Access</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl gold-text mb-4"><i class="fas fa-bed"></i></div>
-                    <h4 class="font-bold text-sm uppercase mb-2">AC Rooms</h4>
-                    <p class="text-xs text-gray-500">Complimentary<br>Stay Included</p>
-                </div>
+
+            <div data-aos="zoom-in">
+                <i class="fas fa-utensils text-4xl gold-text"></i>
+                <h4 class="mt-4 font-bold">Veg & Non-Veg Catering</h4>
             </div>
+
+            <div data-aos="zoom-in">
+                <i class="fas fa-wifi text-4xl gold-text"></i>
+                <h4 class="mt-4 font-bold">Free WiFi</h4>
+            </div>
+
+            <div data-aos="zoom-in">
+                <i class="fas fa-bed text-4xl gold-text"></i>
+                <h4 class="mt-4 font-bold">AC Rooms</h4>
+            </div>
+
         </div>
+
     </section>
+
+    <!-- PRICING -->
 
     <section id="pricing" class="py-24 container mx-auto px-6">
+
         <div class="grid md:grid-cols-2 gap-10">
-            <div class="p-10 border border-white/10 rounded-lg hover:border-[#D4AF37]/50 transition bg-white/5">
-                <h4 class="text-2xl font-serif-krishna gold-text mb-4">Marriage Ceremony</h4>
-                <p class="text-4xl font-bold mb-6 text-white">₹90,000 - 1 Lakh</p>
-                <ul class="space-y-3 text-gray-400 text-sm">
-                    <li><i class="fas fa-check gold-text mr-3"></i> 3 Complimentary AC Rooms</li>
-                    <li><i class="fas fa-check gold-text mr-3"></i> Complete Hall Decoration</li>
-                    <li><i class="fas fa-check gold-text mr-3"></i> Dedicated Event Supervisor</li>
-                </ul>
+
+            <div class="p-10 border border-white/10 rounded-lg bg-white/5">
+
+                <h4 class="text-2xl gold-text mb-4">Marriage Ceremony</h4>
+
+                <p class="text-4xl font-bold mb-6">₹90,000 – ₹1,00,000</p>
+
             </div>
-            <div class="p-10 border border-white/10 rounded-lg hover:border-[#D4AF37]/50 transition bg-white/5">
-                <h4 class="text-2xl font-serif-krishna gold-text mb-4">Other Celebrations</h4>
-                <p class="text-4xl font-bold mb-6 text-white">₹45,000 - 50,000</p>
-                <ul class="space-y-3 text-gray-400 text-sm">
-                    <li><i class="fas fa-check gold-text mr-3"></i> 1 Complimentary AC Room</li>
-                    <li><i class="fas fa-check gold-text mr-3"></i> Birthdays, Engagements, Parties</li>
-                    <li><i class="fas fa-check gold-text mr-3"></i> Standard Decoration Support</li>
-                </ul>
+
+            <div class="p-10 border border-white/10 rounded-lg bg-white/5">
+
+                <h4 class="text-2xl gold-text mb-4">Other Celebrations</h4>
+
+                <p class="text-4xl font-bold mb-6">₹45,000 – ₹50,000</p>
+
             </div>
+
         </div>
+
     </section>
+
+    <!-- REVIEWS -->
+
+    <section class="py-24 bg-black/20">
+
+        <div class="text-center mb-12">
+
+            <h3 class="text-4xl font-serif-krishna">
+                Customer <span class="gold-text">Reviews</span>
+            </h3>
+
+        </div>
+
+        <div class="container mx-auto grid md:grid-cols-3 gap-8 px-6">
+
+            <div class="bg-white/5 p-6 rounded-lg">
+
+                ⭐⭐⭐⭐⭐
+                Beautiful venue with amazing decoration and good management.
+
+            </div>
+
+            <div class="bg-white/5 p-6 rounded-lg">
+
+                ⭐⭐⭐⭐⭐
+                Best function hall near Simhachalam with great catering service.
+
+            </div>
+
+            <div class="bg-white/5 p-6 rounded-lg">
+
+                ⭐⭐⭐⭐⭐
+                Our wedding was perfectly organized here. Highly recommended.
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BOOKING -->
 
     <section id="booking" class="py-24 bg-[#0A1122]">
-        <div class="container mx-auto px-6 max-w-3xl">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl font-serif-krishna mb-2">Reserve Your Date</h3>
-                <p class="text-gray-500 telugu-font text-2xl">బుకింగ్ విచారణ కోసం ఈ క్రింది వివరాలను పంపండి</p>
-            </div>
+
+        <div class="container mx-auto px-6 max-w-xl">
+
+            <h3 class="text-3xl text-center font-serif-krishna mb-10">
+                Reserve Your Date
+            </h3>
+
             <form class="space-y-6">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <input type="text" id="custName" placeholder="Full Name"
-                        class="w-full bg-white/5 border border-white/10 p-4 rounded focus:outline-none focus:border-[#D4AF37]">
-                    <input type="tel" id="custPhone" placeholder="Mobile Number"
-                        class="w-full bg-white/5 border border-white/10 p-4 rounded focus:outline-none focus:border-[#D4AF37]">
-                </div>
-                <input type="date" id="eventDate"
-                    class="w-full bg-white/5 border border-white/10 p-4 rounded text-gray-400">
-                <select id="eventSelect" class="w-full bg-white/5 border border-white/10 p-4 rounded text-gray-400">
-                    <option value="Marriage">Marriage Ceremony</option>
-                    <option value="Other Event">Other Private Event</option>
-                </select>
-                <button type="button" onclick="requestWhatsapp()"
-                    class="w-full gold-bg text-black font-bold py-4 rounded uppercase tracking-widest shadow-lg">Send
-                    Request via WhatsApp</button>
+
+                <input id="custName" placeholder="Full Name" class="w-full bg-white/5 p-4 rounded">
+
+                <input id="custPhone" placeholder="Phone" class="w-full bg-white/5 p-4 rounded">
+
+                <input id="eventDate" type="date" class="w-full bg-white/5 p-4 rounded">
+
+                <button onclick="requestWhatsapp()" type="button" class="gold-bg w-full py-4 rounded font-bold">
+
+                    Send Booking via WhatsApp
+
+                </button>
+
             </form>
+
         </div>
+
     </section>
+
+    <!-- CONTACT + UPDATED MAP -->
 
     <section id="contact" class="py-24 container mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-12">
+
+        <div class="grid md:grid-cols-2 gap-10">
+
             <div>
-                <h3 class="text-2xl font-serif-krishna gold-text mb-6">Contact Us</h3>
-                <p class="mb-4 text-gray-300"><i class="fas fa-envelope mr-3 gold-text"></i> svlnbrindavan@gmail.com</p>
-                <p class="mb-4 text-gray-300"><i class="fas fa-map-marker-alt mr-3 gold-text"></i> Visakhapatnam, Andhra
-                    Pradesh</p>
-                <div class="mt-8">
-                    <p class="text-xs text-gray-500 uppercase tracking-widest mb-4">Scan for Location</p>
-                    <div class="w-32 h-32 bg-white/10 rounded flex items-center justify-center border border-white/10">
-                        <i class="fas fa-qrcode text-4xl opacity-20"></i>
-                    </div>
-                </div>
+
+                <h3 class="text-2xl gold-text mb-4">
+                    Contact Us
+                </h3>
+
+                <p class="mb-3">📧 svlnbrindavan@gmail.com</p>
+
+                <p class="mb-6">
+                    📍 SVLN Brindavan Function Hall
+                    Near Simhachalam, Visakhapatnam
+                </p>
+
+                <a target="_blank"
+                    href="https://www.google.com/maps/search/?api=1&query=SVLN+Brindavan+Function+Hall+Simhachalam+Visakhapatnam"
+                    class="gold-bg px-4 py-2 rounded text-sm">
+
+                    Open in Google Maps
+
+                </a>
+
             </div>
-            <div class="h-80 bg-white/5 rounded-lg overflow-hidden border border-white/10">
+
+            <div class="h-80 rounded-lg overflow-hidden">
+
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15206.5910606627!2d83.2184515!3d17.6868159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39433890f1719b%3A0x633d7b827e4e098a!2sVisakhapatnam%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000"
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    src="https://www.google.com/maps?q=SVLN%20Brindavan%20Function%20Hall%20Simhachalam%20Visakhapatnam&output=embed"
+                    width="100%" height="100%" style="border:0" loading="lazy">
+                </iframe>
+
             </div>
+
         </div>
+
     </section>
 
-    <footer class="py-10 text-center border-t border-white/5 text-[10px] text-gray-600 uppercase tracking-[0.3em]">
-        © 2026 SVLN Brindavan Function Hall. All Rights Reserved.
+    <footer class="py-10 text-center text-gray-500 text-xs">
+        © 2026 SVLN Brindavan Function Hall
     </footer>
 
-    <div class="fixed bottom-8 right-8 flex flex-col space-y-4 z-50">
-        <a href="https://wa.me/919848166799" target="_blank"
-            class="w-14 h-14 bg-green-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition">
-            <i class="fab fa-whatsapp text-2xl"></i>
+    <!-- FLOAT BUTTONS -->
+
+    <div class="fixed bottom-8 right-8 flex flex-col space-y-4">
+
+        <a href="https://wa.me/919848166799"
+            class="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center">
+
+            <i class="fab fa-whatsapp text-xl"></i>
+
         </a>
-        <a href="tel:9848166799"
-            class="w-14 h-14 gold-bg text-black rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition">
-            <i class="fas fa-phone-alt text-xl"></i>
+
+        <a href="tel:9848166799" class="w-14 h-14 gold-bg rounded-full flex items-center justify-center">
+
+            <i class="fas fa-phone"></i>
+
         </a>
+
     </div>
 
-    <script>
-        function requestWhatsapp() {
-            const name = document.getElementById('custName').value;
-            const phone = document.getElementById('custPhone').value;
-            const date = document.getElementById('eventDate').value;
-            const type = document.getElementById('eventSelect').value;
+    <!-- SCRIPTS -->
 
-            const text = `Namaste! I would like to book SVLN Brindavan.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Date:* ${date}%0A*Event:* ${type}`;
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+
+        AOS.init({
+            duration: 1200,
+            once: true
+        });
+
+        function requestWhatsapp() {
+
+            const name = document.getElementById("custName").value;
+            const phone = document.getElementById("custPhone").value;
+            const date = document.getElementById("eventDate").value;
+
+            const text = `Namaste! I would like to book SVLN Brindavan.%0AName:${name}%0APhone:${phone}%0ADate:${date}`;
+
             window.open(`https://wa.me/919848166799?text=${text}`, '_blank');
+
         }
+
+        const images = [
+            "https://lh3.googleusercontent.com/gps-cs-s/AHVAwep1aCI1etwl7VF-zJCeQUimWHQ9RiSlnohzFQa5Z993WwmozwJuq1MNjcpvfxbCZIcpKwAuWopPUT7Nn3oXPqpBNHKPY9iw9R8x99FzK2r0AYmlImh5czKjepmhIQExycefFOE8s8IyLFA=s1360-w1360-h1020-rw",
+            "https://lh3.googleusercontent.com/gps-cs-s/AHVAweotgAsVfTbBNTTSP6oI-y91xgVRXkm2mL6MzfScPBE5vPX1KxpvZduH05RMyJY1wlTRufpvtwpP5KpxgF6Uo06uTkYW5INj75EaMpDBoWMdixe3iE43x2KMn25oEBoSj0r8HPJrDHVOGpIG=s1360-w1360-h1020-rw",
+            "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerbQdgiza3lo7Rl0RYvGxn9mQioc1mAk-jIL3DnkOzI1IPP4rx4iW5f8t5ah321Sjea9UN-98Jy_s_OYiW7QhR2SbK2QZ8LD6OSDbOZaIq79kDBU5ExHA4SopRV6Lth2cXTnmG9EPLVJUk=s1360-w1360-h1020-rw",
+            "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerbHwHK_rOMF7fy4stbGiiUOPl7AdQqqyGlncRR9EqWisZxS36kIIBgKmO4SqvwzPGy8l0z0ihVu2XkOktCQxL23D5DwCMZaL-i_cGdlhX2tHXpabx3RFifC-jHbxLCyfdivkXcV_eLquaR=s1360-w1360-h1020-rw",
+            "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqClFMN5aAWggpX4BWkXIr4HSExtbqD6MQBDPW7-MnJxTxPXyx3Ys28FPuVXSxwfA5weXKyE66SDztdMAb03o0hsbA5X-tye53az-lwhdFq8QagTQEKFAZ_pGID5gmcJll8D17dplDVlqQx=s1360-w1360-h1020-rw"
+        ];
+
+        let i = 0;
+
+        setInterval(() => {
+            i = (i + 1) % images.length;
+            document.getElementById("gallerySlider").src = images[i];
+        }, 4000);
+
     </script>
+
 </body>
 
 </html>
